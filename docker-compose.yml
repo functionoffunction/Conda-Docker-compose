@@ -7,3 +7,5 @@ services:
       - ./notebooks:/opt/notebooks
     ports:
       - "80:8888"
+    environment:
+      - JUPYTER_PASSWORD=${JUPYTER_PASSWORD}
