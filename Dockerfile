@@ -13,4 +13,6 @@ RUN chmod +x /scripts/*
 
 USER root
 
+RUN jupyter notebook --generate-config
+
 CMD ["entrypoint.sh"]
