@@ -6,7 +6,10 @@ on:
     branches:
       - master
       - main
-  pull_request: []
+  pull_request:
+    branches:
+      - master
+      - main
 
 jobs:
   test:
