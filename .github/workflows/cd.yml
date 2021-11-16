@@ -1,0 +1,21 @@
+---
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request: [assigned, opened, synchronize, reopened]
+
+jobs:
+  test:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: docker-compose up
+
+  
