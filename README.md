@@ -3,8 +3,8 @@
 ## Getting started
 
 To start project:
- - Create a .env file in the project root directory
- - Set JUPYTER_PASSWORD as an environment variable in the .env
+ - Create a ```.env``` file in the project root directory
+ - Set JUPYTER_PASSWORD as an environment variable in the ```.env```
     ```bash
         JUPYTER_PASSWORD=my_password
     ```
@@ -22,9 +22,8 @@ To start project:
         docker-compose up --build
     ```
 
-## To tear down the project containers:
-
-    - Run: 
-        ```bash
+## To tear down the project container:
+ - Run:
+    ```bash
         docker-compose down
-        ```
+    ```
