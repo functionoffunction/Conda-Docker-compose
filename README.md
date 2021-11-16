@@ -3,7 +3,7 @@
 ## Getting started
 
 To start project:
- -  Clone the project
+ - Clone the project
     ```bash
         git clone https://github.com/functionoffunction/Conda-Docker-compose
     ```
