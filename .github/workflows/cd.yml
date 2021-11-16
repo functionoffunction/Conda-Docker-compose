@@ -6,7 +6,7 @@ on:
     branches:
       - master
       - main
-  pull_request: [assigned, opened, synchronize, reopened]
+  pull_request: []
 
 jobs:
   test:
