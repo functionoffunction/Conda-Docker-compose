@@ -21,7 +21,7 @@ setup_line = "# c.NotebookApp.password = ''"
 new_setup_line = setup_line.replace("''", "u'" + password + "'")
 new_setup_line = new_setup_line.replace("# ", "")
 setup_file = os.getenv("HOME") + "/.jupyter/jupyter_notebook_config.py"
-print('modifying {}'.format(setup_file))
+print(f'modifying {setup_file}')
 password_required = "# c.NotebookApp.password_required = False"
 
 for line in fileinput.input(setup_file, inplace=True):
