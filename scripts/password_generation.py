@@ -10,11 +10,11 @@ password_environment_variable = os.environ.get('JUPYTER_PASSWORD')
 # Hash the password, this is taken from https://github.com/jupyter/notebook/blob/master/notebook/auth/security.py
 salt_len = 12
 algorithm = 'sha1'
-h = hashlib.new(algorithm)
+hashing_object = hashlib.new(algorithm)
 salt = ('%0' + str(salt_len) + 'x') % random.getrandbits(4 * salt_len)
-h.update(cast_bytes(password_environment_variable,
+hashing_object.update(cast_bytes(password_environment_variable,
                     'utf-8') + str_to_bytes(salt, 'ascii'))
-password = ':'.join((algorithm, salt, h.hexdigest()))
+password = ':'.join((algorithm, salt, hashing_object.hexdigest()))
 
 # Store the password in the configuration
 setup_line = "# c.NotebookApp.password = ''"
