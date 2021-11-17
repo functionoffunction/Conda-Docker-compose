@@ -1,8 +1,7 @@
+version: "3.8"
 services:
   anaconda:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    build: ./
     volumes:
       - ./notebooks:/opt/notebooks
     ports:
