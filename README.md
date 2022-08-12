@@ -1,8 +1,8 @@
-# Jupyter Conda on Docker Compose 
+# Jupyter Notebook on Docker Compose 
 
 ## Project description
 
-Jupyter Conda on Docker Compose provides Conda environment and package access extension from within Jupyter Notebook and JupyterLab.
+Jupyter Notebook on Docker Compose provides Conda environment and package access extension from within Jupyter Notebook and JupyterLab.
 
 ## Requirements
 
