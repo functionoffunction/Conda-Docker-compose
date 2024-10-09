@@ -3,8 +3,13 @@ services:
   anaconda:
     build: ./
     volumes:
-      - ./notebooks:/opt/notebooks
+      - ./notebooks:/notebooks
+      - jupyter_data:/root/.jupyter
     ports:
-      - "${PORT}:8888"
+      - "${PORT:-8888}:8888"
     environment:
-      - JUPYTER_PASSWORD=${JUPYTER_PASSWORD}
+      - JUPYTER_TOKEN=${JUPYTER_PASSWORD}
+      - USE_JUPYTER_LAB=${USE_JUPYTER_LAB:-true}
+
+volumes:
+  jupyter_data:
